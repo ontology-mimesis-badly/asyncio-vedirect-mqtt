@@ -102,7 +102,7 @@ device_types = {
                 "unit_of_measurement": "%",
                 "device_class": "battery",
                 "state_class": "measurement",
-                "multiplier": 1
+                "multiplier": 0.1
             },
             "TTG": {
                 "name": "Time Remaining",
