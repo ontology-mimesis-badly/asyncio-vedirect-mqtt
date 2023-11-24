@@ -114,16 +114,16 @@ device_types = {
             "Alarm": {
                 "name": "Alarm",
                 "unit_of_measurement": "",
-                "device_class": "enum",
+                "device_class": "None",
                 "state_class": "measurement",
-                "multiplier": 1
+                "multiplier": None
             },
             "AR": {
                 "name": "Alarm Reason",
                 "unit_of_measurement": "",
                 "device_class": "None",
                 "state_class": "measurement",
-                "multiplier": 1
+                "multiplier": None
             },
             "H1": {
                 "name": "Depth of Deepest Discharge",
@@ -262,7 +262,7 @@ class AsyncIOVeDirectMqtt:
                 device_class=sensor["device_class"],
                 state_class=sensor["state_class"],
                 multiplier=sensor["multiplier"],
-                mov_avg=self.windowing
+                mov_avg=None if sensor["multiplier"] == None else self.windowing
             )
 
         for key in self.sensor_mapping.keys():
