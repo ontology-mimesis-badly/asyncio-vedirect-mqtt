@@ -1,11 +1,9 @@
 import asyncio
 from asyncio_mqtt import Client, MqttError
 import ssl
-import json
 from asyncio_vedirect_mqtt.victron import AsyncIOVeDirect
 from asyncio_vedirect_mqtt.hass_discovery import Sensor, Device
 import logging
-import time
 
 logger = logging.getLogger(__name__)
 
@@ -71,6 +69,13 @@ device_types = {
         "sensors": {
             "V": {
                 "name": "Battery Voltage",
+                "unit_of_measurement": "V",
+                "device_class": "voltage",
+                "state_class": "measurement",
+                "multiplier": 0.001
+            },
+            "VS": {
+                "name": "Vehicle Battery Voltage",
                 "unit_of_measurement": "V",
                 "device_class": "voltage",
                 "state_class": "measurement",
