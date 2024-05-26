@@ -241,12 +241,12 @@ device_types = {
                 "state_class": "measurement",
                 "multiplier": 0.001,
             },
-            "V2": {
+            "DC_IN_V": {
                 "name": "Starter Battery Voltage",
                 "unit_of_measurement": "V",
                 "device_class": "voltage",
                 "state_class": "measurement",
-                "multiplier": 0.001,
+                "multiplier": 0.01,
             },
             "I": {
                 "name": "Battery Current",
@@ -255,15 +255,22 @@ device_types = {
                 "state_class": "measurement",
                 "multiplier": 0.001,
             },
-            "I2": {
+            "DC_IN_I": {
                 "name": "Starter Battery Current",
                 "unit_of_measurement": "A",
                 "device_class": "current",
                 "state_class": "measurement",
-                "multiplier": 0.001,
+                "multiplier": 0.1,
             },
             "P": {
                 "name": "Battery Power",
+                "unit_of_measurement": "W",
+                "device_class": "power",
+                "state_class": "measurement",
+                "multiplier": 1,
+            },
+            "DC_IN_P": {
+                "name": "Starter Battery Power",
                 "unit_of_measurement": "W",
                 "device_class": "power",
                 "state_class": "measurement",
